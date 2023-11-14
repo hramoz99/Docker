@@ -13,7 +13,6 @@
 - `Processos`
 
 ## Detalhando os conceitos 
-Conhecendo os conceitos básicos de conteiner:
 
 ```
 namespace: Garantia de isolamento de cada conteiner.
