@@ -9,47 +9,30 @@
 - `namespace`
 
 - `cgroups`
+  
+- `Processos`
 
-- `Gerenciamento do sistemas`
-
-- ``
-
-## Comandos Essenciais
-Lista de comandos que todo usuário de Linux deve conhecer:
+## Detalhando os conceitos 
+Conhecendo os conceitos básicos de conteiner:
 
 ```
-ls: Listar arquivos e diretórios no diretório atual.
+namespace: Garantia de isolamento de cada conteiner.
 ```
 ```
-cd: Mudar de diretório.
+cgroups: Gerenciamento de sistemas (definir o poder computacional de cada conteiner).
 ```
 ```
-mkdir: Criar um novo diretório.
-```
-```
-rm: Excluir arquivos e diretórios.
+processos: Cada conteiner é denominado um processo, por esta razão, o consumo de recurso é menor
 ```
 
-## Caminhos Importantes
-Para navegar eficazmente no sistema de arquivos Linux, é fundamental conhecer alguns caminhos significativos:
-```
-/ (Raiz): O diretório raiz do sistema de arquivos.
-```
-```
-/home: O diretório onde os diretórios pessoais dos usuários estão localizados.
-```
-```
-/etc: Contém arquivos de configuração do sistema.
-```
-```
-/var: Armazena arquivos variáveis, como logs e spool de impressão.
-```
-```
-/bin e /usr/bin: Diretórios que contêm executáveis essenciais do sistema.
-```
-```
-/sbin e /usr/sbin: Diretórios que contêm executáveis do sistema para administração.
-```
-```
-/tmp: Diretório temporário para arquivos temporários
-```
+## Níveis do namespace 
+
+`PID:` Provê o isolamento dos processos rodando dentro do conteiner.
+
+`NET:` Provê o isolamento das interfaces de rede.
+
+`IPC:` Provê o isolamento da comunicação entre processos e memórias compartilhada 
+
+`MNT:`  Provê o isolamento do sistema de arquivos/pontos de montagem.
+
+`UTS:` Provê o isolamento do Kernel. Age como se o container fosse outro host
